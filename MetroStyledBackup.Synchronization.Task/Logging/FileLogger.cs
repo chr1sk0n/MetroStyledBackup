@@ -16,6 +16,9 @@ namespace MetroStyledBackup.Synchronization.Task.Logging
         /// </summary>
         private readonly List<string> messages;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FileLogger"/> class.
+        /// </summary>
         public FileLogger()
         {
             this.messages = new List<string>();
