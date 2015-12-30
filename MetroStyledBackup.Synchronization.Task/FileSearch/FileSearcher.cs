@@ -9,6 +9,7 @@ namespace MetroStyledBackup.Synchronization.Task.FileSearch
     /// Searches for files and directories that match a pattern.
     /// </summary>
     [Export(typeof(FileSearcher))]
+    [PartCreationPolicy(CreationPolicy.Shared)]
     public class FileSearcher
     {
         /// <summary>
@@ -47,6 +48,15 @@ namespace MetroStyledBackup.Synchronization.Task.FileSearch
         /// </summary>
         public event Action<string> DirectoryChanged;
 
+
+        /// <summary>
+        /// Search by the specified path and patterns.
+        /// </summary>
+        /// <param name="path">The path.</param>
+        /// <param name="filePattern">The file pattern.</param>
+        /// <param name="directoryPattern">The directory pattern.</param>
+        /// <param name="recursive">if set to <c>true</c> [recursive].</param>
+        /// <returns></returns>
         public bool Search(string path, string filePattern, string directoryPattern, bool recursive)
         {
             _canceled = false;
