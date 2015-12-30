@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.Composition;
 using System.Text.RegularExpressions;
 using MetroStyledBackup.Synchronization.Contracts.IO;
 
@@ -7,6 +8,7 @@ namespace MetroStyledBackup.Synchronization.Task.FileSearch
     /// <summary>
     /// Searches for files and directories that match a pattern.
     /// </summary>
+    [Export(typeof(FileSearcher))]
     public class FileSearcher
     {
         /// <summary>
@@ -23,6 +25,7 @@ namespace MetroStyledBackup.Synchronization.Task.FileSearch
         /// </summary>
         /// <param name="fileAccess">The file access.</param>
         /// <exception cref="System.ArgumentNullException"></exception>
+        [ImportingConstructor]
         public FileSearcher(IFileAccess fileAccess)
         {
             if(fileAccess == null) throw  new ArgumentNullException(nameof(fileAccess));
