@@ -102,19 +102,16 @@ namespace MetroStyledBackup.Synchronization.Task.FileSearch
         /// Searches in a directory for files and subdirectors that match a pattern if search has not been canceled.
         /// </summary>
         /// <param name="path">The path to search in.</param>
-        /// <param name="filepattern">The pattern that the filename has to match.</param>
-        /// <param name="dirpattern">The pattern that the name of the directory has to match.</param>
-        /// <param name="recurse">Specifies whether the search should work recursivly.</param>
+        /// <param name="filePattern">The pattern that the filename has to match.</param>
+        /// <param name="directoryPattern">The pattern that the name of the directory has to match.</param>
+        /// <param name="recursive">Specifies whether the search should work recursivly.</param>
         /// <returns><c>true</c> if the search has not been canceled.</returns>
         private bool SearchDirectory(string path, string filePattern, string directoryPattern, bool recursive)
         {
-            string[] files;
-            string[] directories;
-
             if (_canceled) return false;
 
-            files = _fileAccess.GetFilesInDirectory(path);
-            directories = _fileAccess.GetSubdirectoriesInDirectory(path);
+            var files = _fileAccess.GetFilesInDirectory(path);
+            var directories = _fileAccess.GetSubdirectoriesInDirectory(path);
 
             foreach (string file in files)
             {
