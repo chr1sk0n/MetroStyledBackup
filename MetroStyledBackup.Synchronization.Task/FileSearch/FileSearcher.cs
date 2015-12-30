@@ -99,7 +99,7 @@ namespace MetroStyledBackup.Synchronization.Task.FileSearch
         }
 
         /// <summary>
-        /// Searches in a directory for files and subdirectors that match a pattern if search has not been canceled.
+        /// Searches in a directory for files and subdirectors that match a pattern if the search has not been canceled.
         /// </summary>
         /// <param name="path">The path to search in.</param>
         /// <param name="filePattern">The pattern that the filename has to match.</param>
