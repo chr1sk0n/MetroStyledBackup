@@ -9,19 +9,20 @@ using MetroStyledBackup.Synchronization.Contracts.Logging;
 namespace MetroStyledBackup.Synchronization.Task.Logging
 {
     [Export("FileLogger", typeof(ILogger))]
+    [PartCreationPolicy(CreationPolicy.Shared)]
     public class FileLogger : ILogger
     {
         /// <summary>
-        /// The logged messages.
+        /// The logged _messages.
         /// </summary>
-        private readonly List<string> messages;
+        private readonly List<string> _messages;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="FileLogger"/> class.
         /// </summary>
         public FileLogger()
         {
-            this.messages = new List<string>();
+            this._messages = new List<string>();
         }
 
         /// <summary>
@@ -30,7 +31,7 @@ namespace MetroStyledBackup.Synchronization.Task.Logging
         /// <param name="message">The message.</param>
         public void Log(string message)
         {
-            messages.Add(DateTime.Now.ToString(CultureInfo.CurrentCulture) + "   " + message);
+            this._messages.Add(DateTime.Now.ToString(CultureInfo.CurrentCulture) + "   " + message);
         }
 
         /// <summary>
@@ -44,7 +45,7 @@ namespace MetroStyledBackup.Synchronization.Task.Logging
             {
                 using (var streamWriter = new StreamWriter(pathToLogFile, false, Encoding.UTF32))
                 {
-                    foreach (var message in messages)
+                    foreach (var message in _messages)
                     {
                         streamWriter.WriteLine(message);
                     }
@@ -54,12 +55,12 @@ namespace MetroStyledBackup.Synchronization.Task.Logging
             }
             catch (IOException)
             {
-                this.messages.Clear();
+                this._messages.Clear();
                 return null;
             }
             finally
             {
-                this.messages.Clear();
+                this._messages.Clear();
             }
         }
     }
