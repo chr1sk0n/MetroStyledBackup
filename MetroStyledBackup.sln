@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tasks", "Tasks", "{DA9EF78D-E782-49F9-9D0A-ADC7A3F916DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{41DE3567-CB2D-49AB-BEF2-D9CA10C0737D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetroStyledBackup.Synchronization.Contracts", "MetroStyledBackup.Synchronization.Contracts\MetroStyledBackup.Synchronization.Contracts.csproj", "{D6BFA98D-CE84-4730-AF0F-765919119641}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetroStyledBackup.Synchronization.Task", "MetroStyledBackup.Synchronization.Task\MetroStyledBackup.Synchronization.Task.csproj", "{2BD509E1-5E47-4898-A032-91740DAA3DC1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6BFA98D-CE84-4730-AF0F-765919119641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6BFA98D-CE84-4730-AF0F-765919119641}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6BFA98D-CE84-4730-AF0F-765919119641}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6BFA98D-CE84-4730-AF0F-765919119641}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BD509E1-5E47-4898-A032-91740DAA3DC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BD509E1-5E47-4898-A032-91740DAA3DC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BD509E1-5E47-4898-A032-91740DAA3DC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BD509E1-5E47-4898-A032-91740DAA3DC1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D6BFA98D-CE84-4730-AF0F-765919119641} = {41DE3567-CB2D-49AB-BEF2-D9CA10C0737D}
+		{2BD509E1-5E47-4898-A032-91740DAA3DC1} = {DA9EF78D-E782-49F9-9D0A-ADC7A3F916DC}
+	EndGlobalSection
+EndGlobal

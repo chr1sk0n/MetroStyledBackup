@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Text.RegularExpressions;
-using Metro.Backup.Synchronization.Contracts.IO;
+using MetroStyledBackup.Synchronization.Contracts.IO;
 
-namespace Metro.Backup.Synchronization.FileSearch
+namespace MetroStyledBackup.Synchronization.Task.FileSearch
 {
     /// <summary>
     /// Searches for files and directories that match a pattern.

@@ -1,6 +1,6 @@
-﻿using Metro.Backup.Synchronization.Contracts.IO;
+﻿using MetroStyledBackup.Synchronization.Contracts.IO;
 
-namespace Metro.Backup.Synchronization.Contracts.SyncModes
+namespace MetroStyledBackup.Synchronization.Contracts.SyncModes
 {
     public interface ISyncMode
     {

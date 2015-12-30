@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Metro.Backup.Synchronization.Contracts.IO
+namespace MetroStyledBackup.Synchronization.Contracts.IO
 {
     public interface ICachedFileAccess : IFileAccess
     {

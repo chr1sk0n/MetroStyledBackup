@@ -1,4 +1,4 @@
-﻿namespace Metro.Backup.Synchronization.Contracts.Logging
+﻿namespace MetroStyledBackup.Synchronization.Contracts.Logging
 {
     /// <summary>
     /// Interface that loggers have to implement.
